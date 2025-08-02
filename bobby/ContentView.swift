@@ -6,27 +6,10 @@
 //
 
 import SwiftUI
-//
-//  ContentView.swift
-//  stick-figure
-//
-//  Created by YJ Soon on 1/8/25.
-//
 
 
-struct ContentView: View {
-    var body: some View {
-        ZStack {
-            StickMan()
-                .stroke(lineWidth: 4)
-                .foregroundColor(.black)
 
-            // Add more EmojiViews to decorate your Bobby
-            EmojiView(symbol: "", size: 0, x: 0,  y: 0)
-        }
-        .frame(width: 200, height: 320)
-    }
-}
+
 
 /// Basic stickman
 struct StickMan: Shape {
