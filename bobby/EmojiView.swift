@@ -8,18 +8,15 @@
 import SwiftUI
 
 
-
-struct ContentView: View {
+/// Reusable emoji decorator
+struct EmojiView: View {
+    let symbol: String
+    let size: CGFloat
+    let x: CGFloat
+    let y: CGFloat
     var body: some View {
-        ZStack {
-            StickMan()
-                .stroke(lineWidth: 4)
-                .foregroundColor(.black)
-
-            // Add more EmojiViews to decorate your Bobby
-            EmojiView(symbol: "🍀", size: 50, x: -12,  y: -180)
-            EmojiView(symbol: "👀", size: 50, x: -10,  y: -140)
-        }
-        .frame(width: 200, height: 320)
+        Text(symbol)
+            .font(.system(size: size))
+            .offset(x: x, y: y)
     }
 }
